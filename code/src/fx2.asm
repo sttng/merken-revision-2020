@@ -348,7 +348,7 @@ on_load_complete:
 
 ; ASSETS
 chars_data:: incbin "assets/chars.td"
-hello_world: incbin "assets/intro_text.str"
+hello_world: include "assets/intro_text.str"
 hello_world_end:
 
 SECTION "WaveData1", ROMX,BANK[3],ALIGN[8]

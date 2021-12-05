@@ -213,13 +213,13 @@ on_load_complete:
     ret
 
 section "Fx1Data", ROMX, BANK[2]
-logo_data: incbin "assets/logo.td"
-logo_map: incbin "assets/logo.tm"
+logo_data: include "assets/logo.td"
+logo_map: include "assets/logo.tm"
 logo_map_end:
 gotas_data: incbin "assets/gotas.td"
-gotas_map: incbin "assets/gotas.tm"
-nintendo_data: incbin "assets/nintendo.td"
-nintendo_map: incbin "assets/nintendo.tm"
+gotas_map: include "assets/gotas.tm"
+nintendo_data: include "assets/nintendo.td"
+nintendo_map: include "assets/nintendo.tm"
 
 section "fx1vars", WRAM0
 loaded_line: ds $01

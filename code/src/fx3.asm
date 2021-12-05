@@ -284,7 +284,7 @@ fx_write_text:
     ld [hl], a
     ret
 
-matapacos_str:: incbin "assets/matapacos.str"
+matapacos_str:: include "assets/matapacos.str"
 matapacos_str_end::
 
 section "fx3Vars", WRAM0
