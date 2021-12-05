@@ -115,27 +115,27 @@ mLoadDataIn5Frames: macro
 	jr z, .__load_step4__\@
 
 STEP_COUNT\@ equ 5
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step1__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step2__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step3__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step4__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
@@ -177,32 +177,32 @@ mLoadDataIn6Frames: macro
 	jr z, .__load_step5__\@
 
 STEP_COUNT\@ equ 6
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step1__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step2__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step3__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step4__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step5__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
@@ -248,42 +248,42 @@ mLoadDataIn8Frames: macro
 	jr z, .__load_step7__\@
 
 STEP_COUNT\@ equ 8
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step1__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step2__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step3__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step4__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step5__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step6__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step7__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
@@ -345,82 +345,82 @@ mLoadDataIn16Frames: macro
 	jp z, .__load_step15__\@
 
 STEP_COUNT\@ equ 16
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step1__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step2__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step3__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step4__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step5__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step6__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step7__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step8__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step9__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step10__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step11__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step12__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step13__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step14__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step15__\@:
     	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
@@ -514,132 +514,132 @@ mLoadDataIn32Frames: macro
     jp z, .__load_step31__\@
 
 STEP_COUNT\@ equ 32
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step1__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step2__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step3__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step4__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step5__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step6__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step7__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step8__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step9__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step10__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step11__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step12__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step13__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step14__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step15__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step16__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step17__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step18__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step19__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step20__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step21__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step22__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step23__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step24__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step25__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step26__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step27__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step28__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step29__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step30__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step31__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     xor a
@@ -846,360 +846,360 @@ mLoadDataIn89Frames: macro
     jp z, .__load_step88__\@
 
 STEP_COUNT\@ equ 89
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step1__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step2__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step3__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step4__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step5__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step6__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step7__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step8__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step9__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step10__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step11__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step12__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step13__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step14__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step15__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step16__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step17__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step18__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step19__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step20__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step21__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step22__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step23__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step24__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step25__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step26__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step27__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step28__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step29__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step30__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step31__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step32__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step33__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step34__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step35__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step36__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step37__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step38__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step39__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step40__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step41__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step42__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step43__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step44__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step45__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step46__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step47__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step48__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step49__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step50__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step51__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step52__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step53__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step54__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step55__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step56__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step57__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step58__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step59__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step60__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step61__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step62__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step63__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step64__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step65__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step66__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step67__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step68__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step69__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step70__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step71__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step72__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step73__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step74__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step75__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step76__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step77__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step78__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step79__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step80__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step81__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step82__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step83__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step84__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step85__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step86__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step87__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 .__load_step88__\@:
    	mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
 	xor a
@@ -1266,82 +1266,82 @@ BUBBLE\@ equ 5
     jp .__inc_load_step__\@
 
 STEP_COUNT\@ equ 16
-STEP set 0
+STEP = 0
 
 .__load_step0__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step1__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step2__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step3__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step4__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step5__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step6__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jp .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step7__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step8__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step9__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step10__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step11__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step12__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step13__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step14__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
     jr .__inc_load_step__\@
-STEP set STEP + 1
+STEP = STEP + 1
 
 .__load_step15__\@:
         mSafeVRAMMemcpy \1+(\3/STEP_COUNT\@)*STEP, \2 +(\3/STEP_COUNT\@)*STEP, (\3/STEP_COUNT\@)
@@ -1413,7 +1413,7 @@ endm
 
 mEnableVBlank: macro
 	ld a, [INT_ENABLE]
-	set 0, a
+	= 0, a
 	ld [INT_ENABLE], a
 endm
 
@@ -1677,110 +1677,110 @@ endm
 mLoadIn8SongUpdatesBANK: macro
 
 SIZE\@ equ (\3/ 8)
-STEP\@ set 0
+STEP\@ = 0
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
     
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 endm
 
 
 mLoadIn6SongUpdatesBANK: macro
 
 SIZE\@ equ (\3/ 6)
-STEP\@ set 0
+STEP\@ = 0
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
     
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 endm
 
 mLoadIn4SongUpdatesBANK: macro
 
 SIZE\@ equ (\3/ 4)
-STEP\@ set 0
+STEP\@ = 0
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
     
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
     mSetROMBank \4
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
 endm
 
@@ -1788,17 +1788,17 @@ endm
 mLoadIn2SongUpdatesBANK2: macro
 
 SIZE\@ equ (\3/ 2)
-STEP\@ set 0
+STEP\@ = 0
 
     mSetROMBank 2
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
     
     mSetROMBank 2
     mSafeVRAMMemcpy \1+SIZE\@*STEP\@, \2+SIZE\@*STEP\@, SIZE\@
     mUpdateMusic
-STEP\@ set STEP\@+1
+STEP\@ = STEP\@+1
 
 endm
 
