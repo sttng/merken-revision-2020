@@ -25,7 +25,7 @@ Player_MusicUpdate      equ     $4100
 MusicBank               equ     1
 SongNumber              equ     0       ; 0 - 7
 
-mResetVars: macro
+MACRO mResetVars
     xor a
     ld [SCX],a
     ld [SCY],a
@@ -37,7 +37,7 @@ mResetVars: macro
 endm
 
 
-mResetLoader: macro
+MACRO mResetLoader
 	xor a
 	ld a, [should_load_data]
 	ld a, [load_step]
@@ -47,7 +47,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn4Frames: macro
+MACRO mLoadDataIn4Frames
 	ld a, [should_load_data]
 	cp $01
 	jr nz, .__dont_load_data__\@
@@ -96,7 +96,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn5Frames: macro
+MACRO mLoadDataIn5Frames
 	ld a, [should_load_data]
 	cp $01
 	jr nz, .__dont_load_data__\@
@@ -156,7 +156,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn6Frames: macro
+MACRO mLoadDataIn6Frames
 	ld a, [should_load_data]
 	cp $01
 	jr nz, .__dont_load_data__\@
@@ -223,7 +223,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn8Frames: macro
+MACRO mLoadDataIn8Frames
 	ld a, [should_load_data]
 	cp $01
 	jp nz, .__dont_load_data__\@
@@ -304,7 +304,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn16Frames: macro
+MACRO mLoadDataIn16Frames
 	ld a, [should_load_data]
 	cp $01
 	jp nz, .__dont_load_data__\@
@@ -441,7 +441,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn32Frames: macro
+MACRO mLoadDataIn32Frames
 	ld a, [should_load_data]
 	cp $01
 	jp nz, .__dont_load_data__\@
@@ -659,7 +659,7 @@ endm
 	; 2 = Destination
 	; 3 = Size
 	; 4 = On Complete
-mLoadDataIn89Frames: macro
+MACRO mLoadDataIn89Frames
 	ld a, [should_load_data]
 	cp $01
 	jp nz, .__dont_load_data__\@
@@ -1221,7 +1221,7 @@ endm
     ; 2 = Destination
     ; 3 = Size
     ; 4 = On Complete
-mLoadDataIn16FramesWithBubbles: macro
+MACRO mLoadDataIn16FramesWithBubbles
     ld a, [should_load_data]
     cp $01
     jp nz, .__dont_load_data__\@
@@ -1358,66 +1358,66 @@ STEP = STEP + 1
 
 endm
 
-mInitializeMusic: macro
+MACRO mInitializeMusic
 	ld a, MusicBank
 	ld [ROMB0], a
 	call Player_Initialize
 endm
 
-mSelectSong: macro
+MACRO mSelectSong
 	ld a, \1
 	call Player_SongSelect
 endm
 
-mStartMusic: macro
+MACRO mStartMusic
 	ld a, MusicBank
 	ld [ROMB0], a
 	call Player_MusicStart
 endm
 
-mStopMusic: macro
+MACRO mStopMusic
 	ld a, MusicBank
 	ld [ROMB0], a
 	call Player_MusicStop
 endm
 
-mSetROMBank: macro
+MACRO mSetROMBank
     ld a, \1
     ld [ROMB0], a
 endm
 
-mUpdateMusic: macro
+MACRO mUpdateMusic
 	ld a,MusicBank
 	ld [ROMB0],a
 	call Player_MusicUpdate
 endm
 
-mUpdateMusicWaitVBlank: macro
+MACRO mUpdateMusicWaitVBlank
     mUpdateMusic
     mWaitVBlank
 endm
 
-mSaveRegisters: macro
+MACRO mSaveRegisters
     push af
     push hl
     push de
     push bc
 endm
 
-mRestoreRegisters: macro
+MACRO mRestoreRegisters
     pop bc
     pop de
     pop hl
     pop af
 endm
 
-mEnableVBlank: macro
+MACRO mEnableVBlank
 	ld a, [INT_ENABLE]
 	= 0, a
 	ld [INT_ENABLE], a
 endm
 
-mDisableVBlank: macro
+MACRO mDisableVBlank
 	ld a, [INT_ENABLE]
 	res 0, a
 	ld [INT_ENABLE], a
@@ -1426,7 +1426,7 @@ endm
 ; Arg 1 = Source
 ; Arg 2 = Destination
 ; Arg 3 = Size
-mMemcpy: macro
+MACRO mMemcpy
     ld de, \1
     ld hl, \2
     ld bc, \3
@@ -1437,7 +1437,7 @@ endm
 ; Arg 1 = Source
 ; Arg 2 = Destination
 ; Arg 3 = Size
-mSafeVRAMMemcpy: macro
+MACRO mSafeVRAMMemcpy
 	ld de, \1
     ld hl, \2
     ld bc, \3
@@ -1447,7 +1447,7 @@ endm
 ; Arg 1 = Source
 ; Arg 2 = Destination
 ; Arg 3 = Size
-mSafeVRAMMemcpyMusic: macro
+MACRO mSafeVRAMMemcpyMusic
 	call Player_MusicUpdate
 	ld de, \1
     ld hl, \2
@@ -1458,47 +1458,47 @@ endm
 ; Arg 1 = Value
 ; Arg 2 = Destination
 ; Arg 3 = Size
-mSafeVRAMMemset: macro
+MACRO mSafeVRAMMemset
     ld e, \1
     ld hl, \2
     ld bc, \3
     call safe_vram_memset
 endm
 
-mIfEqualJp: macro
+MACRO mIfEqualJp
 	cp \1
     jp z, \2
 endm
 
-mIfNotEqualJp: macro
+MACRO mIfNotEqualJp
 	cp \1
     jp nz, \2
 endm
 
-mIfEqualOrGreaterThanJp: macro
+MACRO mIfEqualOrGreaterThanJp
 	cp \1
     jp nc, \2
 endm
 
-mIfLowerThanJp: macro
+MACRO mIfLowerThanJp
 	cp \1
     jp c, \2
 endm
 
-mWaitVBlank: macro
+MACRO mWaitVBlank
 .loop\@:
     ld a, [LY]
     cp $90
 	jr nz, .loop\@
 endm
 
-mResetFadeVariables: macro
+MACRO mResetFadeVariables
 	xor a
 	ld [fade_in_offset], a
 	ld [fade_out_offset], a
 endm
 
-mSetStates: macro
+MACRO mSetStates
 	mResetFadeVariables
     ld a, \1
 	ld [current_state], a
@@ -1506,14 +1506,14 @@ mSetStates: macro
     ld [next_state], a
 endm
 
-mWaitForState: macro
+MACRO mWaitForState
 .loop\@:
     ld a, [current_state]
     cp \1
 	jr nz, .loop\@
 endm
 
-mWaitForStateAndFade: macro
+MACRO mWaitForStateAndFade
 	ld a, [fade_color]
 	ld [BGP], a
     ld a, [current_state]
@@ -1522,12 +1522,12 @@ mWaitForStateAndFade: macro
 	db $20, $F5 
 endm
 
-mSetNextState: macro
+MACRO mSetNextState
     ld a, \1
     ld [next_state], a
 endm
 
-mDefineFadeLogic: macro
+MACRO mDefineFadeLogic
 	ld a,[current_state]
 	cp STATE_FADE_IN
 	jr z,.fade_in
@@ -1567,7 +1567,7 @@ mDefineFadeLogic: macro
 
 endm
 
-mDefineFadeLogicDirectBGP: macro
+MACRO mDefineFadeLogicDirectBGP
     ld a,[current_state]
     cp STATE_FADE_IN
     jr z,.fade_in
@@ -1611,7 +1611,7 @@ endm
 ; 2 = Fade In Table End
 ; 3 = Fade Out Table Start
 ; 4 = Fade Out Table End
-mDefineFadeLogicWithTables: macro
+MACRO mDefineFadeLogicWithTables
     ld a,[current_state]
     cp STATE_FADE_IN
     jr z,.fade_in\@
@@ -1651,30 +1651,30 @@ mDefineFadeLogicWithTables: macro
 
 endm
 
-mEnableLoading: macro
+MACRO mEnableLoading
     ld a, 1
     ld [should_load_data], a
 endm
 
-mDisableLoading: macro
+MACRO mDisableLoading
     ld a, 0
     ld [should_load_data], a
 endm
 
-mUpdateBackground: macro
+MACRO mUpdateBackground
     ld a, [fade_color]
     ld [BGP], a
     ld [OBJP0], a
 endm
 
-mJumpCheckEnding: macro
+MACRO mJumpCheckEnding
     ld a, [current_state]
     cp STATE_END_FX
     ret z
     jp \1    
 endm
 
-mLoadIn8SongUpdatesBANK: macro
+MACRO mLoadIn8SongUpdatesBANK
 
 SIZE\@ equ (\3/ 8)
 STEP\@ = 0
@@ -1721,7 +1721,7 @@ STEP\@ = STEP\@+1
 endm
 
 
-mLoadIn6SongUpdatesBANK: macro
+MACRO mLoadIn6SongUpdatesBANK
 
 SIZE\@ equ (\3/ 6)
 STEP\@ = 0
@@ -1757,7 +1757,7 @@ STEP\@ = STEP\@+1
 STEP\@ = STEP\@+1
 endm
 
-mLoadIn4SongUpdatesBANK: macro
+MACRO mLoadIn4SongUpdatesBANK
 
 SIZE\@ equ (\3/ 4)
 STEP\@ = 0
@@ -1785,7 +1785,7 @@ STEP\@ = STEP\@+1
 endm
 
 
-mLoadIn2SongUpdatesBANK2: macro
+MACRO mLoadIn2SongUpdatesBANK2
 
 SIZE\@ equ (\3/ 2)
 STEP\@ = 0
